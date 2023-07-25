@@ -1,0 +1,5 @@
+.cardContainer {
+    -webkit-box-shadow: 3px 5px 17px -7px rgba(66, 68, 90, 0.34);
+    -moz-box-shadow: 3px 5px 17px -7px rgba(66, 68, 90, 0.34);
+    box-shadow: 3px 5px 17px -7px rgba(66, 68, 90, 0.34);
+}

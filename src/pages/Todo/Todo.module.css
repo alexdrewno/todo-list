@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 35rem;
+    height: 60rem;
+}
+
+.content {
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.divider {
+    width: calc(100% - 20px);
+    height: 2px;
+    background-color: #f1f1f1;
+    align-self: center;
+}
