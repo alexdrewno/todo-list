@@ -1,27 +1,25 @@
-# React + TypeScript + Vite
+# Todo List
+You can see a live demo here: https://alexdrewno.github.io/todo-list/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Capabilities
+- Ability to add a todo
+- Mark a todo as completed
+- Delete todos
+- Todos that are >5 days old are marked as 'overdue'
 
-Currently, two official plugins are available:
+## 🖼️ Design 
+- [Figma Designs](https://www.figma.com/file/3BS93XNZvxLULiVjOkUorw/ToDo?type=design&node-id=0%3A1&mode=design&t=UycqDWgr6C7zvra1-1)
+- Mainly used figma to create a POC or initial design ideas
+- Created a basic design system
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔧 Project setup
+- Technologies: ESlint, Prettier, TypeScript, Vitest, React Testing Library, Jest, CSS Modules, React Context
+- Used Vite to create app
+   - Create react app is no longer recommended.
+   - Alternatives include NextJS, Remix, Expo, etc.
+- Using a 'feature-based' project structure
+- Components include reusable/'dumb' components
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## ✈️ CI/CD
+- CircleCI
+- Github Actions to automatically deploy to github pages
