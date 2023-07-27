@@ -22,7 +22,6 @@ module.exports = {
         'no-extra-semi': 'warn',
         'no-process-exit': 'warn',
         'no-prototype-builtins': 'warn',
-        'no-unused-vars': ['warn', { varsIgnorePattern: '^_' }],
         'no-useless-escape': 'warn',
         'react-refresh/only-export-components': [
             'warn',
