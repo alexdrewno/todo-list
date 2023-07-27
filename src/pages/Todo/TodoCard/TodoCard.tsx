@@ -1,7 +1,7 @@
 import { Button } from '../../../components/Button/Button'
 import { Card } from '../../../components/Card/Card'
 import { getDaysBetweenDates } from '../../../utils/Date'
-import { TodoItem, useTodoContext } from '../useTodoContext'
+import { TodoItem, useTodoContext } from '../useTodoContext.tsx'
 import styles from './TodoCard.module.css'
 
 type TodoCardProps = {
@@ -35,11 +35,10 @@ export function TodoCard({ todoItem }: TodoCardProps) {
                     onChange={() => updateTodoItem(id)}
                 />
                 <p className={styles.content}>
-                    {isOverdue && !isCompleted ? (
-                        <span className={titleClassName}>Overdue: {title}</span>
-                    ) : (
-                        <span className={titleClassName}>{title}</span>
+                    {isOverdue && !isCompleted && (
+                        <span className={titleClassName}>Overdue </span>
                     )}
+                    <span className={titleClassName}>{title}</span>
                     <span className='subtext'>{createdAt.toString()}</span>
                 </p>
             </Card>

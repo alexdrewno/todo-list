@@ -5,7 +5,7 @@ import {
     useState,
     useEffect,
 } from 'react'
-import { fetchTodos, saveTodos } from './TodoApi/TodoApi'
+import { fetchTodos, saveTodos } from './Todo.service.ts'
 
 export type TodoItem = {
     id: number
