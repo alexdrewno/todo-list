@@ -10,7 +10,7 @@ export function Header() {
                 title={isEditing ? 'Done' : 'Edit'}
                 onClick={() => setIsEditing((prevIsEditing) => !prevIsEditing)}
             />
-            <h1 className={styles.title}>Todo</h1>
+            <h1 className={styles.title}> Todo </h1>
             <Button title='Add' onClick={() => setIsModalOpen(true)} />
         </div>
     )
