@@ -2,25 +2,16 @@
 # See: https://circleci.com/docs/configuration-reference
 version: 2.1
 
-# Define a job to be invoked later in a workflow.
-# See: https://circleci.com/docs/configuration-reference/#jobs
-jobs:
-  say-hello:
-    # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
-    # See: https://circleci.com/docs/configuration-reference/#executor-job
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-
 # Orchestrate jobs using workflows
 # See: https://circleci.com/docs/configuration-reference/#workflows
 workflows:
-  say-hello-workflow:
-    jobs:
-      - say-hello
+    test: # This is the name of the workflow, feel free to change it to better match your workflow.
+        # Inside the workflow, you define the jobs you want to run.
+        jobs:
+            - node/test:
+                  # This is the node version to use for the `cimg/node` tag
+                  # Relevant tags can be found on the CircleCI Developer Hub
+                  # https://circleci.com/developer/images/image/cimg/node
+                  version: '18.9.0'
+                  # If you are using yarn, change the line below from "npm" to "yarn"
+                  pkg-manager: yarn
