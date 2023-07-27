@@ -31,6 +31,27 @@ type TodoProviderProps = {
 
 const TodoContext = createContext<TodoContextType | undefined>(undefined)
 
+const INITIAL_TODO_ITEMS = [
+    {
+        id: 1,
+        title: 'Completed item',
+        createdAt: new Date(),
+        isCompleted: true,
+    },
+    {
+        id: 2,
+        title: 'Incomplete item',
+        createdAt: new Date(),
+        isCompleted: false,
+    },
+    {
+        id: 3,
+        title: 'Incomplete item >5 days old',
+        createdAt: new Date('07-20-2023'),
+        isCompleted: false,
+    },
+]
+
 export const useTodoContext = () => {
     const userContext = useContext(TodoContext)
 
@@ -56,7 +77,11 @@ export const TodoProvider = ({ children }: TodoProviderProps) => {
             return b.createdAt.getTime() - a.createdAt.getTime()
         })
 
-        setTodoItems(sortedTodoItems)
+        if (sortedTodoItems.length === 0) {
+            setTodoItems(INITIAL_TODO_ITEMS)
+        } else {
+            setTodoItems(sortedTodoItems)
+        }
     }
 
     function addTodoItem(todoItem: TodoItem) {
