@@ -1,6 +1,11 @@
 .container {
     display: flex;
     flex-direction: row;
+}
+
+.cardContainer {
+    display: flex;
+    flex-direction: row;
     align-self: center;
     margin: 1.25rem;
     margin-block: 10px;
@@ -10,15 +15,35 @@
     padding: 0.5rem;
 }
 
+.delete {
+    display: flex;
+    margin-left: 1.25rem;
+    align-self: center;
+}
+
 .content {
     display: flex;
     flex-direction: column;
     padding-inline: 0.5rem;
     text-align: left;
+    overflow: hidden;
 }
 
 .completedText {
     text-decoration: line-through;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.overdueText {
+    color: red;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.text {
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .checkbox {
