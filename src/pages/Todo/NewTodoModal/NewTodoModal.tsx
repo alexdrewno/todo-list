@@ -36,6 +36,7 @@ export function NewTodoModal() {
                         name='Title'
                         onChange={(e) => setTitle(e.target.value)}
                         value={title}
+                        data-testid='title-input'
                     />
                     <Button type='submit' title='Create' />
                 </form>

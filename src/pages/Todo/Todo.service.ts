@@ -1,6 +1,6 @@
 import { TodoItem } from '../useTodoContext'
 
-const TODO_ITEM_KEY = 'todoItems'
+export const TODO_ITEM_KEY = 'todoItems'
 
 export function fetchTodos() {
     const todosJson = localStorage.getItem(TODO_ITEM_KEY)
