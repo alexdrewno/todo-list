@@ -1,4 +1,4 @@
-import { TodoItem } from '../useTodoContext'
+import { TodoItem } from './useTodoContext.tsx'
 
 export const TODO_ITEM_KEY = 'todoItems'
 
