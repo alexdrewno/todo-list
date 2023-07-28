@@ -15,10 +15,15 @@
     padding: 0.5rem;
 }
 
-.delete {
+.deleteContainer {
     display: flex;
     margin-left: 1.25rem;
     align-self: center;
+}
+
+.delete {
+    background-color: #ff392e;
+    color: white;
 }
 
 .content {
