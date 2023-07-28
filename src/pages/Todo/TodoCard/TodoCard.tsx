@@ -22,8 +22,12 @@ export function TodoCard({ todoItem }: TodoCardProps) {
     return (
         <div className={styles.container}>
             {isEditing && (
-                <div className={styles.delete}>
-                    <Button title='delete' onClick={() => deleteTodoItem(id)} />
+                <div className={styles.deleteContainer}>
+                    <Button
+                        className={styles.delete}
+                        title='delete'
+                        onClick={() => deleteTodoItem(id)}
+                    />
                 </div>
             )}
 
